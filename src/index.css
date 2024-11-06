@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+@layer utilities {
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#root {
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* scroll bar */
+.app::-webkit-scrollbar {
+  width: 9px;
+  padding-top: 20px;
+
+  /* width of the entire scrollbar */
+}
+
+.dark::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+  width: 10px;
+  /* color of the tracking area */
+}
+
+.app::-webkit-scrollbar-thumb {
+  background-color: #5b5b5bf3;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+  width: 8px;
+}
+
+.dark .app::-webkit-scrollbar {
+  width: 12px;
+  padding-top: 20px;
+
+  /* width of the entire scrollbar */
+}
+
+.dark .app::-webkit-scrollbar-track {
+  background: rgb(135, 135, 135);
+
+}
+
+.dark .app::-webkit-scrollbar-thumb {
+  background-color: #2e2e2ef3;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+}
+
+
+.small::-webkit-scrollbar {
+  width: 12px;
+  padding: 2px;
+  margin: 2px;
+
+  padding-top: 25px;
+  /* width of the entire scrollbar */
+}
+
+.small::-webkit-scrollbar-track {
+  background: white;
+
+}
+
+.dark .small::-webkit-scrollbar-thumb {
+  background-color: #3c3c3c;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+  padding: 2px;
+  margin-top: 5px;
+  width: 5px;
+}
+
+.dark .small::-webkit-scrollbar-track {
+  background: rgb(130, 130, 130);
+  padding: 5px;
+  /* color of the tracking area */
+
+
+  padding: 2px;
+  padding-top: 25px;
+  margin: 2px;
+  width: fit-content;
+}
+
+.dark .small::-webkit-scrollbar-thumb {
+  background-color: #3c3c3cf3;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+  padding: 2px;
+  margin-top: 5px;
+}
+
+/* loding bar */
+.load-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fdba2c;
+}
+
+.bar {
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 50%;
+  text-align: center;
+}
+
+.bar:nth-child(1) {
+  background-color: #da4733;
+  animation: loading 3s linear infinite;
+}
+
+.bar:nth-child(2) {
+  background-color: #3b78e7;
+  animation: loading 3s linear 1s infinite;
+}
+
+.bar:nth-child(3) {
+  background-color: #fdba2c;
+  animation: loading 3s linear 2s infinite;
+}
+
+@keyframes loading {
+  from {
+    left: 50%;
+    width: 0;
+    z-index: 100;
+  }
+
+  33.3333% {
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.custom-h {
+  height: auto !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .custom-h {
+    height: 100vh !important;
+  }
+}
+
+/* It should launch the youtube clone by snotat
+Please give me some stars on my github
+https://github.com/snotat
+
+and follow me on social media
+fb.com/snotat
+linkedin.com/in/snotat
+x.com.snotat */

@@ -1,0 +1,42 @@
+.header_all {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header_left {
+    width: fit-content;
+}
+
+.header_mid {
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.header_right {
+    width: fit-content;
+}
+
+.mask {
+    -webkit-mask-image: linear-gradient(to left, white, white, transparent);
+    mask-image: linear-gradient(to left, white, white, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: center;
+    padding-bottom: 12px;
+
+}
+
+.mask_1 {
+    -webkit-mask-image: linear-gradient(to right, white, white, transparent);
+    mask-image: linear-gradient(to right, white, white, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: center;
+    padding-bottom: 12px;
+
+}
